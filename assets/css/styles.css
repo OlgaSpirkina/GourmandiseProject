@@ -20,12 +20,12 @@ h2 {
   margin-right: 30px;
 }
 .navbar-toggler-icon {
-  background-color: #fb9dab;
+  /* background-color: #fb9dab; */
   color: black;
   font-size: 28px;
 }
 .navbar-toggler {
-  color: #fb9dab;
+  /* color: #fb9dab; */
 }
 h4 {
   font-family: "Open Sans", sans-serif;
@@ -34,4 +34,12 @@ h4 {
   width: 90%;
   height: 700px;
 
+}
+/* placer l'icon de shopping-card en dehors de navbar */
+.fa-shopping-cart{
+  position: relative;
+  display: inline-block;
+  float: right;
+  right: 0px;
+  top: 2rem;
 }
