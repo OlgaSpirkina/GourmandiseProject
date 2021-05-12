@@ -1,0 +1,7 @@
+/* Les couleurs bootstrap pérsonnalisées */
+
+$theme-colors: (
+  "custom-color": #b0bf1a,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

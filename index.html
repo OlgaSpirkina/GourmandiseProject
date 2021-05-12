@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Gourmandise & Co</title>
+    <!-- Bootstrap local -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/sass/custom-colors.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,11 +23,14 @@
   </head>
   <body>
     <section class="container-fluid">
-      <nav class="navbar navbar-expand-lg">
-        <img class="navbar-brand col-dm-3" width="140" height="140" src="./assets/img/logoCupcake.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+      <div class="shopping-icon">
+        <i class="fas fa-3x fa-shopping-cart"></i>
+      </div>
+      <nav class="navbar navbar-expand-lg w-75">
+        <img class="navbar-brand" width="140" height="140" src="./assets/img/logoCupcake.png">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon bg-custom-color"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="row d-flex justify-content-center">
@@ -48,6 +54,7 @@
         </div>
         </div>
       </nav>
+
     </section>
 
 <section class="container-fluid">
@@ -59,6 +66,20 @@
   </div>
 </section>
 
+
+<section>
+<div class="container">
+<div class="row d-flex ">
+  <div class="col-12 col-lg-6 ">
+    <h2>A propos de nous</h2>
+      <p class="align-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, autem perspiciatis, dolorum incidunt nobis velit modi, accusamus magnam laborum minima tempora vel. Temporibus, provident similique aspernatur dicta inventore et.</p>
+    </div>
+  <div class="col-12 col-lg-6">
+    <img src="./assets/img/photoAbout.jpg" alt="">
+  </div>
+</div>
+</div>
+</section>
 
 <!-- LA BOUTIQUE  -->
 <section id="store">
@@ -97,7 +118,7 @@
 <!-- Les cards -->
 
 <!-- Card N°1 -->
-<div class="container">
+<div class="container-fluid">
 <div class="row mx-lg-5">
   <div class="col-sm-12 col-md-4 mb-3">
     <div class="card">
@@ -196,8 +217,20 @@
 <!-- </div>   -->
 
 </section>
-      
-          
+
+  <!--FOOTER-->
+  <footer class="container-fluid">
+    <div class ="row d-flex justify-content-between">
+    <p class= "col-md-10">&copy; Gourmandises et Compagnie</p>
+    <div class="col-md-2 d-flex justify-content-around social-media">
+      <p><i class="fab fa-facebook-f"></i></p>
+      <p><i class="fab fa-twitter"></i></p>
+      <p><i class="fab fa-instagram"></i></p>
+      <p><i class="fab fa-pinterest"></i></p>
+    </div>
+    </div>
+  </footer>
+<!--END OF FOOTER-->
 <!--
   shopping-card: <i class="fas fa-3x fa-shopping-cart"></i>;
   search: <i class="fas fa-3x fa-search"></i>
