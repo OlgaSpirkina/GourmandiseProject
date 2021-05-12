@@ -34,11 +34,7 @@ h2 {
   color: var(--mainred);
 }
 .navbar-toggler-icon {
-<<<<<<< HEAD
   background-color: var(--mainpink);
-=======
-  /* background-color: #fb9dab; */
->>>>>>> 54d34a1a7d03ec4641a835d1e87d31ed1502d686
   color: black;
   font-size: 28px;
 }
@@ -52,11 +48,11 @@ h4 {
   width: 90%;
   height: 700px;
 }
-<<<<<<< HEAD
 
 .btn {
   font-family: var(--fonttext);
-=======
+}
+
 /*FOOTER */
 footer{
   margin-top: 100px;
@@ -84,7 +80,6 @@ footer .social-media p{
   float: right;
   right: 0px;
   top: 2rem;
->>>>>>> 54d34a1a7d03ec4641a835d1e87d31ed1502d686
 }
 .card-title{
   font-size: 18px;
