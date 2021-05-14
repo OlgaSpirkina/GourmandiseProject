@@ -37,16 +37,10 @@
                   <a class="nav-link" href="#">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Cupcakes</a>
+                  <a class="nav-link" href="#">A propos de nous</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Donuts</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Macarons</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Gâteaux d'anniversaire</a>
+                  <a class="nav-link" href="#">Boutique</a>
                 </li>
               </ul>
             </div>
@@ -59,120 +53,146 @@
     </section>
 
 <section class="container-fluid">
-  <div class="row d-flex justify-content-center">
+  <div class="row col-12 d-flex justify-content-center">
     <h2 class="justify-content-center">Gourmandises & Compagnie</h2>
       <div class=" d-flex justify-content-center">
-        <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
-      </div>
-      <div id="cart" class="cart">
-        <!--
-        cart item - les articles provisoirs seront supprimés plus tard
-      -->
-        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-          <div class="item-text">
-            <p class="font-weight-bold mb-0 cart-item-title"></p>
-            <span>$</span>
-            <span class="cart-item-price" class="mb-0"></span>
-          </div>
-          <a href="#" class="cart-item-remove">
-            <i class="fas fa-trash"></i>
-          </a>
-        </div>
-        <!--end of  cart item -->
-        <!--
-        cart item - les articles provisoirs seront supprimés plus tard
-      -->
-        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-          <div class="cart-item-text">
-            <p class="cart-item-title font-weight-bold mb-0"></p>
-            <span>$</span>
-            <span class="cart-item-price" class="mb-0"></span>
-          </div>
-          <a href="#" class="cart-item-remove">
-            <i class="fas fa-trash"></i>
-          </a>
-        </div>
-        <!--end of  cart item -->
-        <!-- cart total -->
-        <!-- <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-          <h5>total</h5>
-          <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
-        </div> -->
-        <!--end cart total -->
-        <!-- cart buttons -->
-        <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-          <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
-          <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
-        </div>
-        <!--end of  cart buttons -->
-        <!--  -->
-      </div>
+
+
+<!-- LA BOUTIQUE  -->
+<section id="store">
+  <!-- <div class="container-fluid"> -->
+
+<!-- titre Boutique  -->
+<div class="container-fluid">
+<div class="row">
+  <div class="col-12 my-3 text-center">
+    <h2>La boutique</h2>
   </div>
-</section>
-<section>
-    <div class="container">
-      <div class="row d-flex ">
-        <div class="col-12 col-lg-6 ">
-          <h2>A propos de nous</h2>
-            <p class="align-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, autem perspiciatis, dolorum incidunt nobis velit modi, accusamus magnam laborum minima tempora vel. Temporibus, provident similique aspernatur dicta inventore et.</p>
-          </div>
-        <div class="col-12 col-lg-6">
-          <img class="col-12" src="./assets/img/photoAbout.jpg" alt="">
-        </div>
-      </div>
-    </div>
-      </div>
-      </div>
-</section>
-<section class="container-fluid">
-  <div class="row">
-    <div class="card col-md-4 parent" style="width: 20rem;">
-      <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix: <span class="span-price">10</span></p>
-        <div class="add-to-cart btn btn-primary">Add to cart</div>
-      </div>
-    </div>
+</div>
+</div>
 
-    <div class="card col-md-4 parent" style="width: 20rem;">
-      <img class="card-img-top" src="./assets/img/macarons/macarons_12.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix: <span class="span-price">15</span></p>
-        <div class="add-to-cart btn btn-primary">Add to cart</div>
-      </div>
-    </div>
-
-    <div class="card col-md-4 parent" style="width: 20rem;">
-      <img class="card-img-top" src="./assets/img/cupcakes/cupcake_6.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix: <span class="span-price">5</span></p>
-        <div class="add-to-cart btn btn-primary">Add to cart</div>
-      </div>
-    </div>
-
-    <div class="card col-md-4" style="width: 20rem;">
-      <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">Macaron</h4>
-        <p class="card-text span-price">12</p>
-        <button type="button" class="add-to-cart">Add jjjto cart</button>
-        <span class="cart-item-price" class="mb-0"></span>
-      </div>
-    </div>
-
-    <div class="card col-md-4" style="width: 20rem;">
-      <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 id="title" class="card-title">Macaron</h4>
-        <p id="price" class="card-text">Prix:</p>
-        <div class="add-to-cart btn btn-primary">Add to cart</div>
-      </div>
-    </div>
-
+<!-- Liens des catégories -->
+<div class="container">
+<div class="row">
+  <div class="col-md-12 d-flex justify-content-around flex-wrap">
+    <button type="button" class="btn btn-outline-danger">VOIR TOUT</button>
+    <button type="button" class="btn btn-outline-danger">CUPCAKES</button>
+    <button type="button" class="btn btn-outline-danger">DONUTS</button>
+    <button type="button" class="btn btn-outline-danger">MACARONS</button>
+    <button type="button" class="btn btn-outline-danger">GATEAUX</button>
   </div>
+</div>
+</div>
+<!-- Fin des catégories -->
+
+<!-- Barre de recherche-->
+<div class="container">
+<form class="form-inline d-flex justify-content-end my-3">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+</form>
+</div>
+
+<!-- Les cards -->
+
+<!-- Card N°1 -->
+<div class="container-fluid">
+<div class="row mx-lg-5">
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/cupcakes/cupcake_2.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Cupcake Framboise</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Card N°2 -->
+
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Donut rainbow</h5>
+
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Card N°3 -->
+
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/macarons/macarons_10.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Boite de macarons</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card N°4 -->
+<div class="row mx-lg-5">
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/birthday-cake/cake_3.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Gâteau à la fraise</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Card N°5 -->
+
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/cupcakes/cupcake_3.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Cupcakes nature</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Card N°6 -->
+
+  <div class="col-sm-12 col-md-4 mb-3">
+    <div class="card">
+    <img class="card-img-top" src="./assets/img/donuts/donut_3.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Donuts chocolat</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- fin des cards -->
+<div class="container">
+<div class="row">
+  <div class="col-12 d-flex text-center justify-content-center">
+<button type="button" class="btn btn-danger">Voir Plus ...</button>
+</div>
+</div>
+</div>
+
+
+
+<!-- </div>   -->
+
 </section>
 
   <!--FOOTER-->
