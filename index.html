@@ -23,38 +23,39 @@
   </head>
   <body>
     <section class="container-fluid">
-      <div class="shopping-icon">
-        <i class="fas fa-3x fa-shopping-cart"></i>
+      <div class="row d-flex justify-content-between">
+        <nav class="navbar navbar-expand-lg w-75">
+          <img class="navbar-brand" width="140" height="140" src="./assets/img/logoCupcake.png">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars text-custom-color"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="row d-flex justify-content-center">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cupcakes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Donuts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Macarons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Gâteaux d'anniversaire</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="shopping-icon">
+          <i class="fas fa-3x fa-shopping-cart text-custom-color"></i>
+        </div>
       </div>
-      <nav class="navbar navbar-expand-lg w-75">
-        <img class="navbar-brand" width="140" height="140" src="./assets/img/logoCupcake.png">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon bg-custom-color"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="row d-flex justify-content-center">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cupcakes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Donuts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Macarons</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Gâteaux d'anniversaire</a>
-            </li>
-          </ul>
-        </div>
-        </div>
-      </nav>
-
     </section>
 
 <section class="container-fluid">
@@ -63,9 +64,51 @@
       <div class=" d-flex justify-content-center">
         <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
       </div>
+      <div id="cart" class="cart">
+        <!--
+        cart item - les articles provisoirs seront supprimés plus tard
+      -->
+        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+          <div class="item-text">
+            <p class="font-weight-bold mb-0 cart-item-title"></p>
+            <span>$</span>
+            <span class="cart-item-price" class="mb-0"></span>
+          </div>
+          <a href="#" class="cart-item-remove">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+        <!--end of  cart item -->
+        <!--
+        cart item - les articles provisoirs seront supprimés plus tard
+      -->
+        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+          <div class="cart-item-text cart-text">
+            <p class="cart-item-title font-weight-bold mb-0"></p>
+            <span>$</span>
+            <span class="cart-item-price" class="mb-0"></span>
+          </div>
+          <a href="#" class="cart-item-remove">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+        <!--end of  cart item -->
+        <!-- cart total -->
+        <!-- <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+          <h5>total</h5>
+          <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
+        </div> -->
+        <!--end cart total -->
+        <!-- cart buttons -->
+        <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+          <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+          <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+        </div>
+        <!--end of  cart buttons -->
+        <!--  -->
+      </div>
   </div>
 </section>
-
 <section>
     <div class="container">
       <div class="row d-flex ">
@@ -74,20 +117,20 @@
             <p class="align-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, autem perspiciatis, dolorum incidunt nobis velit modi, accusamus magnam laborum minima tempora vel. Temporibus, provident similique aspernatur dicta inventore et.</p>
           </div>
         <div class="col-12 col-lg-6">
-          <img src="./assets/img/photoAbout.jpg" alt="">
+          <img class="col-12" src="./assets/img/photoAbout.jpg" alt="">
         </div>
+      </div>
+    </div>
       </div>
       </div>
 </section>
-
-
 <section class="container-fluid">
   <div class="row">
     <div class="card col-md-4 parent" style="width: 20rem;">
       <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix:</p>
+        <p class="card-text">Prix: <span class="span-price">10</span></p>
         <div class="add-to-cart btn btn-primary">Add to cart</div>
       </div>
     </div>
@@ -96,7 +139,7 @@
       <img class="card-img-top" src="./assets/img/macarons/macarons_12.jpg" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix:</p>
+        <p class="card-text">Prix: <span class="span-price">15</span></p>
         <div class="add-to-cart btn btn-primary">Add to cart</div>
       </div>
     </div>
@@ -105,7 +148,7 @@
       <img class="card-img-top" src="./assets/img/cupcakes/cupcake_6.jpg" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix:</p>
+        <p class="card-text">Prix: <span class="span-price">5</span></p>
         <div class="add-to-cart btn btn-primary">Add to cart</div>
       </div>
     </div>
@@ -114,16 +157,17 @@
       <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix:</p>
-        <div class="add-to-cart btn btn-primary">Add to cart</div>
+        <p class="card-text span-price">12</p>
+        <button type="button" class="add-to-cart">Add jjjto cart</button>
+        <span class="cart-item-price" class="mb-0"></span>
       </div>
     </div>
 
     <div class="card col-md-4" style="width: 20rem;">
       <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
       <div class="card-block">
-        <h4 class="card-title">Macaron</h4>
-        <p class="card-text">Prix:</p>
+        <h4 id="title" class="card-title">Macaron</h4>
+        <p id="price" class="card-text">Prix:</p>
         <div class="add-to-cart btn btn-primary">Add to cart</div>
       </div>
     </div>
@@ -153,9 +197,9 @@
     facebook: <i class="fab fa-2x fa-facebook-square"></i>
     twitter: <i class="fab fa-2x fa-twitter"></i>
    -->
+    <script src="assets/script/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="assets/script/main.js"></script>
   </body>
 </html>
