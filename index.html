@@ -58,48 +58,17 @@
       <div class=" d-flex justify-content-center">
         <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
       </div>
-      <div id="cart" class="cart">
-        <!--
-        cart item - les articles provisoirs seront supprimés plus tard
-      -->
-        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-          <div class="item-text">
-            <p class="font-weight-bold mb-0 cart-item-title"></p>
-            <span>$</span>
-            <span class="cart-item-price" class="mb-0"></span>
-          </div>
-          <a href="#" class="cart-item-remove">
-            <i class="fas fa-trash"></i>
-          </a>
+<!-- Le PANIER: la div contenant la list des articles mis dans le panier -->
+      <div id="cart" class="cart d-flex flex-column-reverse">
+        <h4>Votre panier est vide</h4>
+<!-- valider le panier -->
+        <div id="btn-in-cart"class="cart-buttons-container mt-3 d-flex justify-content-center">
+          <a href="http://stackoverflow.com" class="btn btn-outline-secondary text-uppercase btn-pink">Valider</a>
         </div>
-        <!--end of  cart item -->
-        <!--
-        cart item - les articles provisoirs seront supprimés plus tard
-      -->
-        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-          <div class="cart-item-text cart-text">
-            <p class="cart-item-title font-weight-bold mb-0"></p>
-            <span>$</span>
-            <span class="cart-item-price" class="mb-0"></span>
-          </div>
-          <a href="#" class="cart-item-remove">
-            <i class="fas fa-trash"></i>
-          </a>
-        </div>
-        <!--end of  cart item -->
-        <!-- cart total -->
-        <!-- <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-          <h5>total</h5>
-          <h5> $ <strong id="cart-total" class="font-weight-bold">10.00</strong> </h5>
-        </div> -->
-        <!--end cart total -->
-        <!-- cart buttons -->
-        <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-          <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
-          <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
-        </div>
-        <!--end of  cart buttons -->
-  </div>
+<!-- la somme total des articles -->
+        <span class="d-flex justify-content-center"><strong id="total"></strong></span>
+      </div>
+<!-- La FIN du panier -->
 </section>
 <section>
 <div class="container my-5">
@@ -159,7 +128,7 @@
     <div class="card-body">
       <h5 class="card-title">Cupcake Framboise</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">12€</span><a href="#" onclick="addPriceToCart(12,'Cupcake Framboise',1,'./assets/img/cupcakes/cupcake_2.jpg')" class="btn btn-danger">Ajouter au panier</a>
     </div>
     </div>
   </div>
@@ -173,7 +142,7 @@
       <h5 class="card-title">Donut rainbow</h5>
 
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">15€ </span><a href="#" class="btn btn-danger" onclick="addPriceToCart(15,'Donut rainbow',2,'./assets/img/donuts/donut_1.jpg')">Ajouter au panier</a>
     </div>
     </div>
   </div>
@@ -185,7 +154,7 @@
     <div class="card-body">
       <h5 class="card-title">Boite de macarons</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">10€ </span><a href="#" class="btn btn-danger" onclick="addPriceToCart(10,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</a>
     </div>
     </div>
   </div>
@@ -198,7 +167,7 @@
     <div class="card-body">
       <h5 class="card-title">Gâteau à la fraise</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">14€ </span><a href="#" class="btn btn-danger" onclick="addPriceToCart(12,'Gâteau à la fraise', 4, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</a>
     </div>
     </div>
   </div>
@@ -210,7 +179,7 @@
     <div class="card-body">
       <h5 class="card-title">Cupcakes nature</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">16€ </span><a href="#" class="btn btn-danger" onclick="addPriceToCart(16,'Cupcakes nature', 5, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</a>
     </div>
     </div>
   </div>
@@ -224,12 +193,20 @@
     <div class="card-body">
       <h5 class="card-title">Donuts chocolat</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-danger">Ajouter au panier</a>
+      <span class="span-price">11€ </span><a href="#" class="btn btn-danger" onclick="addPriceToCart(11,'Donuts chocolat', 6, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</a>
     </div>
     </div>
   </div>
 </div>
 </div>
+
+<!-- card-test -->
+<div class="col-sm-12 col-md-4 mb-3">
+  <div class="card-test">
+
+  </div>
+</div>
+<!-- fin card-test -->
 <!-- fin des cards -->
 <div class="container">
 <div class="row">
