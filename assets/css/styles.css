@@ -98,6 +98,7 @@ le panier est visible quand on clique sur l'icon de panier
   width: 18rem;
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
+	z-index: 1;
 }
 /* le bouton dans le panier et le span qui calcule la sommen total sont invisible par defaut */
 #btn-in-cart,
@@ -153,9 +154,12 @@ list-style-type: none;
     font-size: 35px;
   }
 	.cart{
-		background: rgba(255, 255, 255, .93);
+		background: rgba(255, 255, 255, .7);
 	}
 	.fa-shopping-cart{
 		scale: .7;
+	}
+	.btn-background{
+		background-color: rgba(251,157,171, .7);
 	}
 }

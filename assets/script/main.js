@@ -16,7 +16,7 @@ function addPriceToCart(prix, prod, id, img) {
                             '<p class="font-weight-bold mb-0 cart-item-title prod-title">' + prod + '</p>' +
                             '<img src=' + img + ' style="width: 30%; margin: .2rem">' +
                             '<span>€</span>' +
-                            '<span class="cart-item-price" class="mb-0">' + prix + '</span>' +
+                            '<span class="cart-item-price" class="mb-0">' + prix +  '</span>' +
                           '</div>' +
                           '<a href="#" class="cart-item-remove" style="margin-top: 1.5rem" onclick="emptyTrash(' + id + ')">' +
                             '<i class="fas fa-trash"></i>' +
@@ -33,10 +33,12 @@ function addPriceToCart(prix, prod, id, img) {
       arrayShoppingCart.push(price);
       sum += price;
       document.getElementById("total").innerHTML = sum;
+      document.getElementById("totalPrice").innerHTML = "Total €:";
+
 }
 // supprimer les article un par un
 function emptyTrash(item_id){
-  let removedItem = document.querySelector(".prod-title").innerHTML;
+  let removedItem = document.querySelector("#item_" + item_id + " > .item-text > .prod-title").innerHTML;
   let removedPrice = document.querySelector("#item_" + item_id + " > .item-text > .cart-item-price").innerHTML;
   document.getElementById("total").innerHTML -= removedPrice; // décroitre la summe total quand un article est supprimé du panier
   document.querySelector("#item_" + item_id).remove();
@@ -49,6 +51,7 @@ function allRemoved(){
     document.querySelector("h4").style.visibility = "visible"; // afficher le text "votre panier est vide"
     document.getElementById("btn-in-cart").style.visibility = "hidden"; // cacher le bouton "Valider la commande"
     sum = 0; // remettre le compteur à 0
+    document.getElementById("totalPrice").innerHTML = "";
   }
 }
 // la FIN de la fonction allRemoved() et de toutes les fonction appliquées au PANIER
