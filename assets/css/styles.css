@@ -14,10 +14,11 @@
 .imgAccueil {
   max-width: 100%;
   width: 100%;
-  height: 720px;
+  height: auto;
   display: block;
   /* changer la height par rapport à la navbar */
 
+	background-size: cover;
 }
 h2 {
   font-family: var(--fonttitle);
@@ -36,24 +37,16 @@ h2 {
   color: var(--mainred);
 }
 .navbar-toggler-icon {
-  background-color: var(--mainpink);
-  color: black;
-  font-size: 28px;
+  /* background-color: var(--mainpink); */
+  /* color: black; */
+  font-size: 30px;
 }
-/* .navbar-toggler {
-  /* color: #fb9dab;} */
 h4 {
   font-family: "Open Sans", sans-serif;
 }
-
-
 .btn {
   font-family: var(--fonttext);
 }
-
-/* #containerCards {
-  overflow: hidden;
-} */
 
 /*FOOTER */
 footer{
@@ -91,7 +84,7 @@ la class attribuée à la div dans le html. Le panier est caché par defaut
   position: absolute;
   min-height: 20rem;
   background: pink;
-  top: 0;
+  top: 10rem;
   right: 0;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.5);
@@ -117,16 +110,10 @@ le panier est visible quand on clique sur l'icon de panier
 .card-title{
   font-size: 18px;
 }
-
-
 /* début css catégories Cards */
-
-
 .filter-list {
 list-style-type: none;
 }
-
-
 /* item permet de linker les catégories avec les articles */
 .item {
     display: none;
@@ -135,14 +122,40 @@ list-style-type: none;
     background-color: white;
   /* border: 3px solid black; */
 }
-
-
 .show {
     display: block;
 }
-
-
 #test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8, #test9, #test10, #test11, #test12{
-  display: none;
+  /* display: none; */
 }
 /* fin css catégories cards */
+/* les icons qui permetent d'ajouter un article dans le panier sont cachés */
+.small-shopping-icon{
+	visibility: hidden;
+}
+/* la div qui contient un icon shopping-cart */
+.div-small-shopping-icon{
+	position: absolute;
+	float: right;
+	top: 15rem;
+	right: 1.3rem;
+}
+/* faire apparaitre un icon, sur onclick l'article correspondant est envoyé dans le panier */
+.div-small-shopping-icon:hover > .small-shopping-icon{
+	visibility: visible;
+	transition: all 0.3s ease-in-out;
+	scale: 1.2;
+	background-color: yellow;
+}
+/* Media queries */
+@media all and (max-width: 600px) {
+   h2{
+    font-size: 35px;
+  }
+	.cart{
+		background: rgba(255, 255, 255, .93);
+	}
+	.fa-shopping-cart{
+		scale: .7;
+	}
+}
