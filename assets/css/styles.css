@@ -91,7 +91,7 @@ la class attribuée à la div dans le html. Le panier est caché par defaut
   position: absolute;
   min-height: 20rem;
   background: pink;
-  top: 5rem;
+  top: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.5);
@@ -112,6 +112,7 @@ le panier est visible quand on clique sur l'icon de panier
 .card-title{
   font-size: 18px;
 }
+
 
 /* début css catégories Cards */
 
@@ -140,3 +141,5 @@ list-style-type: none;
   display: none;
 }
 /* fin css catégories cards */
+
+
