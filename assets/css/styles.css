@@ -106,8 +106,13 @@ le panier est visible quand on clique sur l'icon de panier
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
 }
+/* le bouton dans le panier et le span qui calcule la sommen total sont invisible par defaut */
+#btn-in-cart,
+#total{
+  visibility: hidden;
+}
 .cart-buttons-container a{
-  margin-top: 15rem;
+  top: 10rem;
 }
 .card-title{
   font-size: 18px;
@@ -140,5 +145,3 @@ list-style-type: none;
   /* display: none; */
 } 
 /* fin css catégories cards */
-
-
