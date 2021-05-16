@@ -13,9 +13,9 @@ let sum = 0;
 function addPriceToCart(prix, prod, id, img) {
   let shoppingCart = '<div id=item_'+ id +' class="cart-item d-flex justify-content-between text-capitalize my-3">' +
                           '<div class="item-text">' +
-                            '<p class="font-weight-bold mb-0 cart-item-title">' + prod + '</p>' +
+                            '<p class="font-weight-bold mb-0 cart-item-title prod-title">' + prod + '</p>' +
                             '<img src=' + img + ' style="width: 30%; margin: .2rem">' +
-                            '<span>$</span>' +
+                            '<span>€</span>' +
                             '<span class="cart-item-price" class="mb-0">' + prix + '</span>' +
                           '</div>' +
                           '<a href="#" class="cart-item-remove" style="margin-top: 1.5rem" onclick="emptyTrash(' + id + ')">' +
@@ -36,9 +36,11 @@ function addPriceToCart(prix, prod, id, img) {
 }
 // supprimer les article un par un
 function emptyTrash(item_id){
+  let removedItem = document.querySelector(".prod-title").innerHTML;
   let removedPrice = document.querySelector("#item_" + item_id + " > .item-text > .cart-item-price").innerHTML;
   document.getElementById("total").innerHTML -= removedPrice; // décroitre la summe total quand un article est supprimé du panier
   document.querySelector("#item_" + item_id).remove();
+  alert("Voulez-vous supprimer l'article: " + removedItem + " ?");
   allRemoved(); // s'il n'y a plus d'articles dans le panier appeler la fonction allRemoved()
 }
 function allRemoved(){
