@@ -1,9 +1,8 @@
-/* * {
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  background-color: rgb(248, 247, 239);
-} */
+}
 
 
 :root{
@@ -14,8 +13,12 @@
 }
 .imgAccueil {
   max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
+  /* changer la height par rapport à la navbar */
+
+	background-size: cover;
 }
 h2 {
   margin-top : 150px;
@@ -38,21 +41,13 @@ h2 {
   border-bottom: 2px solid #e53935;
 }
 .navbar-toggler-icon {
-  background-color: var(--mainpink);
-  color: black;
-  font-size: 28px;
-}
-.navbar-toggler {
-  /* color: #fb9dab; */
+  /* background-color: var(--mainpink); */
+  /* color: black; */
+  font-size: 30px;
 }
 h4 {
   font-family: "Open Sans", sans-serif;
 }
-.imgAccueil{
-  width: 90%;
-  height: 700px;
-}
-
 .btn {
   font-family: var(--fonttext);
 }
@@ -93,7 +88,7 @@ la class attribuée à la div dans le html. Le panier est caché par defaut
   position: absolute;
   min-height: 20rem;
   background: pink;
-  top: 5rem;
+  top: 10rem;
   right: 0;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.5);
@@ -107,46 +102,68 @@ le panier est visible quand on clique sur l'icon de panier
   width: 18rem;
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
+	z-index: 1;
+}
+/* le bouton dans le panier et le span qui calcule la sommen total sont invisible par defaut */
+#btn-in-cart,
+#total{
+  visibility: hidden;
 }
 .cart-buttons-container a{
-  margin-top: 15rem;
+  top: 10rem;
 }
 .card-title{
   font-size: 18px;
 }
-.container {
-  overflow: hidden;
+/* début css catégories Cards */
+.filter-list {
+list-style-type: none;
 }
-
-.filterDiv {
-  float: left;
-  /*width: 100px;
-  line-height: 100px;*/
-  text-align: center;
-  /*margin: 2px;*/
-  display: none; /* Hidden by default */
+/* item permet de linker les catégories avec les articles */
+.item {
+    display: none;
+    /* padding: 2rem; */
+    /* text-align: center; */
+    background-color: white;
+  /* border: 3px solid black; */
 }
-
-/* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+    display: block;
 }
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  cursor: pointer;
+#test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8, #test9, #test10, #test11, #test12{
+  /* display: none; */
 }
-
-/* Add a light pink background on mouse-over */
-.btn:hover {
-  background-color: #fb9dab;
+/* fin css catégories cards */
+/* les icons qui permetent d'ajouter un article dans le panier sont cachés */
+.small-shopping-icon{
+	visibility: hidden;
 }
-
-/* Add a dark background to the active button
-.btn.active {
-  background-color: #666;
-  color: white;
-}*/
+/* la div qui contient un icon shopping-cart */
+.div-small-shopping-icon{
+	position: absolute;
+	float: right;
+	top: 15rem;
+	right: 1.3rem;
+}
+/* faire apparaitre un icon, sur onclick l'article correspondant est envoyé dans le panier */
+.div-small-shopping-icon:hover > .small-shopping-icon{
+	visibility: visible;
+	transition: all 0.3s ease-in-out;
+	scale: 1.2;
+	background-color: yellow;
+}
+/* Media queries */
+@media all and (max-width: 600px) {
+   h2{
+    font-size: 35px;
+  }
+	.cart{
+		background: rgba(255, 255, 255, .7);
+	}
+	.fa-shopping-cart{
+		scale: .7;
+	}
+	.btn-background{
+		background-color: rgba(251,157,171, .7);
+	}
+}
