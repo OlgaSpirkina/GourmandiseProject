@@ -35,13 +35,13 @@
             <div class="row d-flex justify-content-center">
               <ul class="nav justify-content-center">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Accueil</a>
+                  <a class="nav-link" href="#cart">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">A propos de nous</a>
+                  <a class="nav-link" href="#aboutUs">A propos de nous</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Boutique</a>
+                  <a class="nav-link" href="#store">Boutique</a>
                 </li>
               </ul>
             </div>
@@ -74,7 +74,7 @@
       </div>
     </section>
     <!-- la section A propos de nous -->
-    <section>
+    <section id="aboutUs">
       <div class="container my-5">
       <div class="row d-flex">
         <div class="col-12 col-lg-6">
@@ -131,9 +131,9 @@
           </div>
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_2.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Cupcake Framboise</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price mr-3 mr-3">11€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Cupcake framboise</h5>
+            <p class="card-text">Délicieux cupcake à la framboise recouvert de glaçage vanille de bourbon </p>
+            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -142,9 +142,9 @@
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Donut rainbow</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price mr-3">12€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(12,'Donut rainbow', 2, './assets/img/donuts/donut_1.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Donut arc-en-ciel</h5>
+            <p class="card-text">Irrésistible donut nature fourré à la crème avec un glaçage vanille et arc-en-ciel</p>
+            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(12,'Donut rainbow', 2, './assets/img/donuts/donut_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -153,9 +153,9 @@
         <div class="card">
           <img class="card-img-top" src="./assets/img/macarons/macarons_10.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Boite de macarons</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price mr-3">13€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(13,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Boîte de 12 macarons</h5>
+            <p class="card-text">Choisissez parmi notre sélélection 12 de nos merveilleux macarons</p>
+            <span class="span-price mr-3">20€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(13,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -165,9 +165,8 @@
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_3.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Gâteau à la fraise</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">14€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(14,'Gâteau à la fraise', 4, './assets/img/birthday-cake/cake_3.jpg')">Ajouter au panier</button>
+            <p class="card-text">Magnifique gâteau à la fraise et glaçage vanille de bourbon</p>
+            <span class="span-price mr-3">60€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(14,'Gâteau à la fraise', 4, './assets/img/birthday-cake/cake_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -176,10 +175,9 @@
         <div class="card">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_3.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Cupcakes nature</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">15€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(15,'Cupcakes nature', 5, './assets/img/cupcakes/cupcake_3.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Cupcake nature</h5>
+            <p class="card-text">Cupcake saveur vanille et glaçage vanille de bourbon</p>
+            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(15,'Cupcakes nature', 5, './assets/img/cupcakes/cupcake_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -188,10 +186,9 @@
         <div class="card">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_5.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Layer cake</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">16€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(16,'Layer cake', 6, './assets/img/birthday-cake/cake_5.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Gâteau occasion spéciale</h5>
+            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
+            <span class="span-price mr-3">80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(16,'Layer cake', 6, './assets/img/birthday-cake/cake_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -200,10 +197,9 @@
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_3.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Donuts chocolat</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">17€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(17,'Donuts chocolat', 7, './assets/img/donuts/donut_3.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Donut chocolat</h5>
+            <p class="card-text">Succulent donut fourré au chocolat avec glaçage chocolat</p>
+            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(17,'Donuts chocolat', 7, './assets/img/donuts/donut_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -213,9 +209,8 @@
           <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Macaron lavande</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">18€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(18,'Macaron lavande', 8, './assets/img/macarons/macarons_4.jpg')">Ajouter au panier</button>
+            <p class="card-text">Macaron moelleux à la saveur de lavande de Provence</p>
+            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(18,'Macaron lavande', 8, './assets/img/macarons/macarons_4.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -225,10 +220,9 @@
         <div class="card" id="test1">
           <img class="card-img-top" src="./assets/img/cupcakes/pexels-photo-818789.jpeg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Cupcake Chocolat</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">19€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(19,'Cupcake Chocolat', 9, './assets/img/cupcakes/pexels-photo-818789.jpeg')">Ajouter au panier</button>
+            <h5 class="card-title">Cupcake chocolat</h5>
+            <p class="card-text">Délicieux cupcake au chocolat enrobé de glaçage pur cacao</p>
+            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(19,'Cupcake Chocolat', 9, './assets/img/cupcakes/pexels-photo-818789.jpeg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -237,10 +231,9 @@
         <div class="card" id="test2">
           <img class="card-img-top" src="./assets/img/macarons/boxmacarons.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Boite de 20 macarons</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">20€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Boite de 20 macarons', 10, './assets/img/macarons/boxmacarons.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Boîte de 20 macarons</h5>
+            <p class="card-text">Choisissez parmi notre sélélection 20 de nos merveilleux macarons</p>
+            <span class="span-price mr-3">35€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Boite de 20 macarons', 10, './assets/img/macarons/boxmacarons.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -249,10 +242,9 @@
         <div class="card" id="test3">
           <img class="card-img-top" src="./assets/img/donuts/donut-5191099_640.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Donut Caramel beurre salé</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">21€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(21,'Donut Caramel beurre salé', 11, './assets/img/donuts/donut-5191099_640.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Donut caramel beurre salé</h5>
+            <p class="card-text">Délectable donut au caramel d'Isigny et beurre salé avec un glaçage vanille et noisettes caramelisées</p>
+            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(21,'Donut Caramel beurre salé', 11, './assets/img/donuts/donut-5191099_640.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -261,10 +253,9 @@
         <div class="card" id="test4">
           <img class="card-img-top" src="./assets/img/donuts/donut_5.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Donut Vanille Pistache</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">22€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(22,'Donut Vanille Pistache', 12, './assets/img/donuts/donut_5.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Donut vanille pistache</h5>
+            <p class="card-text">Savoureux donut à la pistache avec son glaçage à la vanille de bourbon</p>
+            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(22,'Donut Vanille Pistache', 12, './assets/img/donuts/donut_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -273,10 +264,9 @@
         <div class="card" id="test5">
           <img class="card-img-top" src="./assets/img/donuts/donut_6.jpeg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Box 6 donuts</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">23€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(23,'Box 6 donuts', 13, './assets/img/donuts/donut_6.jpeg')">Ajouter au panier</button>
+            <h5 class="card-title">Boîte de 6 donuts</h5>
+            <p class="card-text">Choisissez parmi notre sélélection 6 de nos merveilleux donuts</p>
+            <span class="span-price mr-3">16€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(23,'Box 6 donuts', 13, './assets/img/donuts/donut_6.jpeg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -285,10 +275,9 @@
         <div class="card" id="test6">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_1.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Rainbow Cupcake</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">24€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(24,'Rainbow Cupcake', 14, './assets/img/cupcakes/cupcake_1.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Cupcake arc-en-ciel</h5>
+            <p class="card-text">Fantaisiste cupcake nature avec un glaçage à la fraise et décoration bonbons</p>
+            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(24,'Rainbow Cupcake', 14, './assets/img/cupcakes/cupcake_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -297,10 +286,9 @@
         <div class="card" id="test7">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_5.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Box 6 cupcakes</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">25€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(25,'Box 6 cupcakes', 15, './assets/img/cupcakes/cupcake_5.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Boîte de 6 cupcakes</h5>
+            <p class="card-text">Choisissez parmi notre sélélection 6 de nos merveilleux cupcakes</p>
+            <span class="span-price mr-3">22€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(25,'Box 6 cupcakes', 15, './assets/img/cupcakes/cupcake_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -309,10 +297,9 @@
         <div class="card" id="test8">
           <img class="card-img-top" src="./assets/img/macarons/macaron_2.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Boite macarons pastel</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">26€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(26,'Boite macarons pastel', 16, './assets/img/macarons/macaron_2.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Macaron framboise</h5>
+            <p class="card-text">Exquis macaron à la framboise fourré d'une gelée à la framboise</p>
+            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(26,'Boite macarons pastel', 16, './assets/img/macarons/macaron_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -321,10 +308,9 @@
         <div class="card" id="test9">
           <img class="card-img-top" src="./assets/img/macarons/macaron_1.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Macarons Chocolat Pistache</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">27€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(27,'Macarons Chocolat Pistache', 17, './assets/img/macarons/macaron_1.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Macaron pistache café chocolat</h5>
+            <p class="card-text">Délectable macaron saveur pistache café fourré au chocolat</p>
+            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(27,'Macarons Chocolat Pistache', 17, './assets/img/macarons/macaron_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -333,10 +319,9 @@
         <div class="card" id="test10">
           <img class="card-img-top" src="./assets/img/birthday-cake/pie-2980431_960_720.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Gateau 1</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">28€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(28,'Gateau 1', 18, './assets/img/birthday-cake/pie-2980431_960_720.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Gâteau au chocolat</h5>
+            <p class="card-text">Succulent gâteau au chocolat au lait fourré de truffes au chocolat blanc et noir</p>
+            <span class="span-price mr-3">70€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(28,'Gateau 1', 18, './assets/img/birthday-cake/pie-2980431_960_720.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -345,10 +330,9 @@
         <div class="card" id="test11">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Gateau 2</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">29€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(29,'Gateau 2', 19, './assets/img/birthday-cake/cake_2.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Gâteau marriage</h5>
+            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
+            <span class="span-price mr-3">120€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(29,'Gateau 2', 19, './assets/img/birthday-cake/cake_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
@@ -357,10 +341,9 @@
         <div class="card" id="test12">
           <img class="card-img-top" src="./assets/img/birthday-cake/birthday-3021071_960_720.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Gâteau Personnalisé</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <span class="span-price mr-3">30€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Gâteau Personnalisé', 20, './assets/img/birthday-cake/birthday-3021071_960_720.jpg')">Ajouter au panier</button>
+            <h5 class="card-title">Gâteau anniversaire</h5>
+            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
+            <span class="span-price mr-3">90€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Gâteau Personnalisé', 20, './assets/img/birthday-cake/birthday-3021071_960_720.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
