@@ -81,8 +81,7 @@ showAll()
 // fin fonction catégories
 
 // début fonction voir plus
-$(function () {
-    $('#b1').click(function(){
+    $('#buttonPlus').click(function(){
         $('#test1').toggle();
         $('#test2').toggle();
         $('#test3').toggle();
@@ -96,5 +95,20 @@ $(function () {
         $('#test11').toggle();
         $('#test12').toggle();
     });
-});
+
 // fin fonction voir plus
+
+// changer texte bouton
+// let buttonPlus = document.querySelector('#buttonPlus');
+// let isVisible = false
+// console.log(isVisible);
+
+// $("#buttonPlus").click(function()
+// {
+// 	$(this).html("Voir Moins");
+// });
+
+// buttonPlus.addEventListener("click", () => {
+//   isVisible = !isVisible;
+//   isVisible ? text.classList.add('isVisible') : text.classList.replace("Voir Moins");
+// })
