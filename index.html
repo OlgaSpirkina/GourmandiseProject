@@ -111,11 +111,18 @@
         </ul>
       </div>
     </div>
+    <!-- Fin des catégories -->
+    
+    <!-- Barre de recherche-->
+    <div class="container">
+      <form class="form-inline d-flex justify-content-end my-3">
+        <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </form>
     </div>
     <!-- Les cards -->
     <!--1st card-->
     <div class="container-fluid d-flex flex-wrap mb-3 justify-content-center">
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <div class="div-small-shopping-icon" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">
             <i class="fas fa-3x fa-cart-arrow-down small-shopping-icon"></i>
@@ -129,7 +136,7 @@
         </div>
       </div>
       <!--2nd card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
           <div class="card-body">
@@ -140,7 +147,7 @@
         </div>
       </div>
       <!--3rd card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/macarons/macarons_10.jpg" alt="Card image cap">
           <div class="card-body">
@@ -151,7 +158,7 @@
         </div>
       </div>
       <!--4th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_3.jpg" alt="Card image cap">
           <div class="card-body">
@@ -163,7 +170,7 @@
         </div>
       </div>
       <!--5th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_3.jpg" alt="Card image cap">
           <div class="card-body">
@@ -175,7 +182,7 @@
         </div>
       </div>
       <!--6th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_5.jpg" alt="Card image cap">
           <div class="card-body">
@@ -187,7 +194,7 @@
         </div>
       </div>
       <!--7th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_3.jpg" alt="Card image cap">
           <div class="card-body">
@@ -199,7 +206,7 @@
         </div>
       </div>
       <!--8th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
           <div class="card-body">
@@ -212,7 +219,7 @@
       </div>
       <!-- toggle à partir d'ici -->
       <!--9th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test1">
           <img class="card-img-top" src="./assets/img/cupcakes/pexels-photo-818789.jpeg" alt="Card image cap">
           <div class="card-body">
@@ -224,7 +231,7 @@
         </div>
       </div>
       <!--10th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test2">
           <img class="card-img-top" src="./assets/img/macarons/boxmacarons.jpg" alt="Card image cap">
           <div class="card-body">
@@ -236,7 +243,7 @@
         </div>
       </div>
       <!-- 11th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test3">
           <img class="card-img-top" src="./assets/img/donuts/donut-5191099_640.jpg" alt="Card image cap">
           <div class="card-body">
@@ -248,7 +255,7 @@
         </div>
       </div>
       <!-- 12th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test4">
           <img class="card-img-top" src="./assets/img/donuts/donut_5.jpg" alt="Card image cap">
           <div class="card-body">
@@ -260,7 +267,7 @@
         </div>
       </div>
       <!-- 13th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test5">
           <img class="card-img-top" src="./assets/img/donuts/donut_6.jpeg" alt="Card image cap">
           <div class="card-body">
@@ -272,7 +279,7 @@
         </div>
       </div>
       <!-- 14th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test6">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_1.jpg" alt="Card image cap">
           <div class="card-body">
@@ -284,7 +291,7 @@
         </div>
       </div>
       <!-- 15th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test7">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_5.jpg" alt="Card image cap">
           <div class="card-body">
@@ -296,7 +303,7 @@
         </div>
       </div>
       <!-- 16th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test8">
           <img class="card-img-top" src="./assets/img/macarons/macaron_2.jpg" alt="Card image cap">
           <div class="card-body">
@@ -308,7 +315,7 @@
         </div>
       </div>
       <!-- 17th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test9">
           <img class="card-img-top" src="./assets/img/macarons/macaron_1.jpg" alt="Card image cap">
           <div class="card-body">
@@ -320,7 +327,7 @@
         </div>
       </div>
       <!-- 18th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test10">
           <img class="card-img-top" src="./assets/img/birthday-cake/pie-2980431_960_720.jpg" alt="Card image cap">
           <div class="card-body">
@@ -332,7 +339,7 @@
         </div>
       </div>
       <!-- 19th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test11">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
           <div class="card-body">
@@ -344,7 +351,7 @@
         </div>
       </div>
       <!-- 20th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test12">
           <img class="card-img-top" src="./assets/img/birthday-cake/birthday-3021071_960_720.jpg" alt="Card image cap">
           <div class="card-body">
@@ -380,6 +387,7 @@
   </footer>
   <!--END OF FOOTER-->
     <script src="assets/script/main.js"></script>
+    <script src="assets/script/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
