@@ -15,7 +15,7 @@ function addPriceToCart(prix, prod, id, img) {
                           '<div class="item-text">' +
                             '<p class="font-weight-bold mb-0 cart-item-title">' + prod + '</p>' +
                             '<img src=' + img + ' style="width: 30%; margin: .2rem">' +
-                            '<span>$</span>' +
+                            '<span>€</span>' +
                             '<span class="cart-item-price" class="mb-0">' + prix + '</span>' +
                           '</div>' +
                           '<a href="#" class="cart-item-remove" style="margin-top: 1.5rem" onclick="emptyTrash(' + id + ')">' +
@@ -76,8 +76,7 @@ showAll()
 // fin fonction catégories
 
 // début fonction voir plus
-$(function () {
-    $('#b1').click(function(){
+    $('#buttonPlus').click(function(){
         $('#test1').toggle();
         $('#test2').toggle();
         $('#test3').toggle();
@@ -91,5 +90,20 @@ $(function () {
         $('#test11').toggle();
         $('#test12').toggle();
     });
-});
+
 // fin fonction voir plus
+
+// changer texte bouton
+// let buttonPlus = document.querySelector('#buttonPlus');
+// let isVisible = false
+// console.log(isVisible);
+
+// $("#buttonPlus").click(function()
+// {
+// 	$(this).html("Voir Moins");
+// });
+
+// buttonPlus.addEventListener("click", () => {
+//   isVisible = !isVisible;
+//   isVisible ? text.classList.add('isVisible') : text.classList.replace("Voir Moins");
+// })

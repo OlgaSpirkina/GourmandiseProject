@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <!-- fontawesome script -->
     <script src="https://kit.fontawesome.com/e206f53c0e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="container-fluid">
@@ -54,9 +55,9 @@
     <section class="container-fluid">
       <div class="row col-12 d-flex justify-content-center">
         <h2 class="justify-content-center">Gourmandises & Compagnie</h2>
-          <div class=" d-flex justify-content-center">
-            <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
-          </div>
+          
+            <img class="imgAccueil" src="./assets/img/banniere.jpg" alt="gateau_pastel">
+          
     <!-- Le PANIER: la div contenant la list des articles mis dans le panier -->
           <div id="cart" class="cart d-flex flex-column-reverse">
             <h4>Votre panier est vide</h4>
@@ -67,7 +68,9 @@
     <!-- la somme total des articles -->
             <span class="d-flex justify-content-center"><strong id="total"></strong></span>
           </div>
+        
     <!-- La FIN du panier -->
+    </div>
     </section>
     <!-- la section A propos de nous -->
     <section>
@@ -215,7 +218,7 @@
       <!-- toggle à partir d'ici -->
       <!--9th card-->
       <div class="row item category-1 col-md-6 col-lg-3 mb-3">
-        <div class="card" id="test1">
+        <div class="card test" id="test1">
           <img class="card-img-top" src="./assets/img/cupcakes/pexels-photo-818789.jpeg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Cupcake Chocolat</h5>
@@ -227,7 +230,7 @@
       </div>
       <!--10th card-->
       <div class="row item category-3 col-md-6 col-lg-3 mb-3">
-        <div class="card" id="test2">
+        <div class="card test" id="test2">
           <img class="card-img-top" src="./assets/img/macarons/boxmacarons.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Boite de 20 macarons</h5>
@@ -364,12 +367,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex text-center justify-content-center">
-          <button id="b1" type="button" class="btn btn-danger">Voir Plus ...</button>
+          <button id="buttonPlus" type="button" class="btn btn-danger">Voir Plus ...</button>
+       
         </div>
       </div>
     </div>
     <!-- fin bouton voir plus -->
-  </section>
+
+    
   <!--FOOTER-->
   <footer class="container-fluid">
     <div class="row d-flex justify-content-between">
