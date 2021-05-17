@@ -20,11 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <!-- fontawesome script -->
     <script src="https://kit.fontawesome.com/e206f53c0e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="container-fluid">
-      <div class="row d-flex justify-content-between">
-        <nav class="navbar fixed-top navbar-expand-lg w-100 bg-white justify-content-center">
+      <div class="row fixed-top d-flex justify-content-between">
+        <nav class="navbar navbar-expand-lg w-100 bg-white justify-content-center">
           <img class="navbar-brand" width="140" height="140" src="./assets/img/logoCupcake.png">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +47,9 @@
             </div>
           </div>
         </nav>
-        <div class="shopping-icon">
-          <i class="fas fa-3x fa-shopping-cart text-custom-color"></i>
+        <section class="container-fluid">
+        <div class="row d-flex shopping-icon justify-content-end">
+          <i class="fas fa-2x fa-shopping-cart text-custom-color"></i>
         </div>
       </div>
     </section>
@@ -67,19 +69,20 @@
               <span id="totalPrice" class="d-flex justify-content-center mx-2"></span><span><strong id="total"></strong></span>
             </div>
           </div>
+
     <!-- La FIN du panier -->
       </div>
     </section>
     <!-- la section A propos de nous -->
     <section>
       <div class="container my-5">
-      <div class="row d-flex ">
+      <div class="row d-flex">
         <div class="col-12 col-lg-6">
           <h2>A propos de nous</h2>
-            <p class="align-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, autem perspiciatis, dolorum incidunt nobis velit modi, accusamus magnam laborum minima tempora vel. Temporibus, provident similique aspernatur dicta inventore et.</p>
+            <p>Gourmandises et Compagnie a ouvert ses portes en 2012 au cœur de Paris. Crée par Olga, ancienne professeure de sport devenue pâtissière, Emma, formée à la prestigieuse école Ferrandi, et Fama, formée chez Fauchon, Gourmandises et Compagnie vous propose des macarons, des donuts, des cupcakes et des gâteaux très originaux. Inspirés des pâtisseries américaines avec des saveurs à la française la boutique dans le 20ème arrondissement vous accueille du lundi au samedi de 10h00 à 19h30.</p>
           </div>
-        <div class="col-12 col-lg-6">
-          <img class="col-12" src="./assets/img/photoAbout.jpg" alt="">
+        <div class="col-12 col-lg-6 mt-5">
+          <img class="col-12 mt-5" src="./assets/img/photoAbout.jpg" alt="">
         </div>
       </div>
       </div>
@@ -112,14 +115,13 @@
       </div>
     </div>
     <!-- Fin des catégories -->
-    
-    <!-- Barre de recherche-->
-    <div class="container">
-      <form class="form-inline d-flex justify-content-end my-3">
-        <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      </form>
-    </div>
-    <!-- Les cards -->
+      <!-- Barre de recherche-->
+      <div class="container">
+        <form class="form-inline d-flex justify-content-end my-3">
+          <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+      <!-- Les cards -->
     <!--1st card-->
     <div class="container-fluid d-flex flex-wrap mb-3 justify-content-center">
       <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
@@ -363,16 +365,19 @@
         </div>
       </div>
     <!-- fin des cards -->
+  </div>
     <!-- Bouton voir plus  -->
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex text-center justify-content-center">
-          <button id="b1" type="button" class="btn btn-danger rounded-pill">Voir Plus ...</button>
+          <button id="buttonPlus" type="button" class="btn btn-danger rounded-pill">Voir Plus ...</button>
+
         </div>
       </div>
     </div>
     <!-- fin bouton voir plus -->
-  </section>
+
+
   <!--FOOTER-->
   <footer class="container-fluid">
     <div class="row d-flex justify-content-between">
