@@ -58,6 +58,7 @@ function allRemoved(){
 // fonction pour les catégories
 
 // Create a var to select item
+let buttonPlus = document.querySelector('#buttonPlus');
 var gridItems = document.querySelectorAll('.item')
 
 function showAll() {
@@ -82,6 +83,15 @@ showAll()
 
 // début fonction voir plus
     $('#buttonPlus').click(function(){
+      if($(this).html("Voir Plus ...")){
+        $(this).html("Voir Moins");
+        $(this).addClass("voir-moins");
+      }else if($(this).html("Voir Moins")){
+        $(this).html('Voir Plus ...');
+        $(this).removeClass('voir-moins');
+      }
+
+
         $('#test1').toggle();
         $('#test2').toggle();
         $('#test3').toggle();
@@ -94,14 +104,15 @@ showAll()
         $('#test10').toggle();
         $('#test11').toggle();
         $('#test12').toggle();
+          // $(this).html() == "Voir Moins" ? "Voir Plus ..." : "Voir Moins";
     });
-
 // fin fonction voir plus
 
 // changer texte bouton
 // let buttonPlus = document.querySelector('#buttonPlus');
-// let isVisible = false
-// console.log(isVisible);
+let isVisible = document.querySelector('#test1');
+isVisible == false
+console.log(isVisible);
 
 // $("#buttonPlus").click(function()
 // {
