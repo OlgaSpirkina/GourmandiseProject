@@ -72,6 +72,12 @@ footer .social-media p{
   cursor: pointer;
 }
 /* END OF FOOTER */
+
+/* Barre de recherches */
+#search{ 
+    border-radius:30px;
+    border: 2px solid #fb9dab;
+}
 /* placer l'icon de shopping-card en dehors de navbar */
 .fa-shopping-cart{
   position: absolute;
