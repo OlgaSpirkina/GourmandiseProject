@@ -14,12 +14,14 @@
 .imgAccueil {
   max-width: 100%;
   width: 100%;
-  height: 720px;
+  height: auto;
   display: block;
   /* changer la height par rapport à la navbar */
 
+	background-size: cover;
 }
 h2 {
+  margin-top : 175px;
   font-family: var(--fonttitle);
   color: var(--mainred);
   font-size: 50px;
@@ -35,25 +37,20 @@ h2 {
 .nav-link:hover{
   color: var(--mainred);
 }
-.navbar-toggler-icon {
-  background-color: var(--mainpink);
-  color: black;
-  font-size: 28px;
+.navbar{
+  border-bottom: 2px solid #e53935;
 }
-/* .navbar-toggler {
-  /* color: #fb9dab;} */
+.navbar-toggler-icon {
+  /* background-color: var(--mainpink); */
+  /* color: black; */
+  font-size: 30px;
+}
 h4 {
   font-family: "Open Sans", sans-serif;
 }
-
-
 .btn {
   font-family: var(--fonttext);
 }
-
-/* #containerCards {
-  overflow: hidden;
-} */
 
 /*FOOTER */
 footer{
@@ -69,19 +66,22 @@ footer .social-media p{
   margin-right: 25px;
   border: 1px solid #fff;
   border-radius: 100%;
-  padding: 5px;
+  padding: 3%;
   text-align: center;
-  width: 40px;
+  width: 15%;
   cursor: pointer;
 }
 /* END OF FOOTER */
 /* placer l'icon de shopping-card en dehors de navbar */
 .fa-shopping-cart{
-  position: relative;
+  position: absolute;
   display: inline-block;
   right: 0px;
   top: 3rem;
   margin-right: 1rem;
+}
+.shopping-icon{
+margin-top: 10px;
 }
 /*
 la div contenant le panier (.cart)
@@ -91,7 +91,7 @@ la class attribuée à la div dans le html. Le panier est caché par defaut
   position: absolute;
   min-height: 20rem;
   background: pink;
-  top: 0;
+  top: 10rem;
   right: 0;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.5);
@@ -105,6 +105,7 @@ le panier est visible quand on clique sur l'icon de panier
   width: 18rem;
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
+	z-index: 1;
 }
 /* le bouton dans le panier et le span qui calcule la sommen total sont invisible par defaut */
 #btn-in-cart,
@@ -117,16 +118,10 @@ le panier est visible quand on clique sur l'icon de panier
 .card-title{
   font-size: 18px;
 }
-
-
 /* début css catégories Cards */
-
-
 .filter-list {
 list-style-type: none;
 }
-
-
 /* item permet de linker les catégories avec les articles */
 .item {
     display: none;
@@ -135,13 +130,47 @@ list-style-type: none;
     background-color: white;
   /* border: 3px solid black; */
 }
-
-
 .show {
     display: block;
 }
-
 #test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8, #test9, #test10, #test11, #test12{
   /* display: none; */
-} 
+}
 /* fin css catégories cards */
+/* les icons qui permetent d'ajouter un article dans le panier sont cachés */
+.small-shopping-icon{
+	visibility: hidden;
+}
+/* la div qui contient un icon shopping-cart */
+.div-small-shopping-icon{
+	position: absolute;
+	float: right;
+	top: 15rem;
+	right: 1.3rem;
+}
+/* faire apparaitre un icon, sur onclick l'article correspondant est envoyé dans le panier */
+.div-small-shopping-icon:hover > .small-shopping-icon{
+	visibility: visible;
+	transition: all 0.3s ease-in-out;
+	scale: 1.2;
+	background-color: yellow;
+}
+/* Media queries */
+@media all and (max-width: 600px) {
+   h2{
+    font-size: 25px;
+  }
+	.cart{
+		background: rgba(255, 255, 255, .7);
+	}
+	.fa-shopping-cart{
+		scale: .7;
+	}
+	.btn-background{
+		background-color: rgba(251,157,171, .7);
+	}
+  .shopping-icon{
+  margin-top: -30px;
+  }
+
+}

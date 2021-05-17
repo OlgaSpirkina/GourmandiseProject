@@ -23,8 +23,8 @@
   </head>
   <body>
     <section class="container-fluid">
-      <div class="row d-flex justify-content-between">
-        <nav class="navbar navbar-expand-lg w-75">
+      <div class="row fixed-top d-flex justify-content-between">
+        <nav class="navbar navbar-expand-lg w-100 bg-white justify-content-center">
           <img class="navbar-brand" width="140" height="140" src="./assets/img/logoCupcake.png">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="row d-flex justify-content-center">
-              <ul class="navbar-nav mr-auto">
+              <ul class="nav justify-content-center">
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Accueil</a>
                 </li>
@@ -46,28 +46,30 @@
             </div>
           </div>
         </nav>
-        <div class="shopping-icon">
-          <i class="fas fa-3x fa-shopping-cart text-custom-color"></i>
+        <section class="container-fluid">
+        <div class="row d-flex shopping-icon justify-content-end">
+          <i class="fas fa-2x fa-shopping-cart text-custom-color"></i>
         </div>
       </div>
     </section>
-    <section class="container-fluid">
-      <div class="row col-12 d-flex justify-content-center">
-        <h2 class="justify-content-center">Gourmandises & Compagnie</h2>
-          <div class=" d-flex justify-content-center">
-            <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
-          </div>
+    <section class="container-fluid mx-0 px-0">
+      <div class="row d-flex justify-content-center mx-0 px-0">
+        <h2 class="text-center">Gourmandises & Compagnie</h2>
+        <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
     <!-- Le PANIER: la div contenant la list des articles mis dans le panier -->
           <div id="cart" class="cart d-flex flex-column-reverse">
             <h4>Votre panier est vide</h4>
     <!-- valider le panier -->
-            <div id="btn-in-cart"class="cart-buttons-container mt-3 d-flex justify-content-center">
-              <a href="http://stackoverflow.com" class="btn btn-outline-secondary text-uppercase btn-pink">Valider</a>
+            <div id="btn-in-cart" class="cart-buttons-container mt-3 d-flex justify-content-center">
+              <a href="http://stackoverflow.com" class="btn btn-outline-secondary text-uppercase btn-background">Valider</a>
             </div>
     <!-- la somme total des articles -->
-            <span class="d-flex justify-content-center"><strong id="total"></strong></span>
+            <div class="d-flex justify-content-center">
+              <span id="totalPrice" class="d-flex justify-content-center mx-2"></span><span><strong id="total"></strong></span>
+            </div>
           </div>
     <!-- La FIN du panier -->
+      </div>
     </section>
     <!-- la section A propos de nous -->
     <section>
@@ -111,260 +113,262 @@
       </div>
     </div>
     <!-- Fin des catégories -->
-    <!-- Barre de recherche-->
-    <div class="container">
-      <form class="form-inline d-flex justify-content-end my-3">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      </form>
-    </div>
-    <!-- Les cards -->
+      <!-- Barre de recherche-->
+      <div class="container">
+        <form class="form-inline d-flex justify-content-end my-3">
+          <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+      <!-- Les cards -->
     <!--1st card-->
     <div class="container-fluid d-flex flex-wrap mb-3 justify-content-center">
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
+          <div class="div-small-shopping-icon" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">
+            <i class="fas fa-3x fa-cart-arrow-down small-shopping-icon"></i>
+          </div>
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_2.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Cupcake Framboise</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price">11€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3 mr-3">11€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--2nd card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Donut rainbow</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price">12€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(12,'Donut rainbow', 2, './assets/img/donuts/donut_1.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">12€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(12,'Donut rainbow', 2, './assets/img/donuts/donut_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--3rd card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/macarons/macarons_10.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Boite de macarons</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <span class="span-price">13€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(13,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">13€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(13,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--4th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_3.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Gâteau à la fraise</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">14€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(14,'Gâteau à la fraise', 4, './assets/img/birthday-cake/cake_3.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">14€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(14,'Gâteau à la fraise', 4, './assets/img/birthday-cake/cake_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--5th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_3.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Cupcakes nature</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">15€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(15,'Cupcakes nature', 5, './assets/img/cupcakes/cupcake_3.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">15€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(15,'Cupcakes nature', 5, './assets/img/cupcakes/cupcake_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--6th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_5.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Layer cake</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">16€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(16,'Layer cake', 6, './assets/img/birthday-cake/cake_5.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">16€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(16,'Layer cake', 6, './assets/img/birthday-cake/cake_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--7th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/donuts/donut_3.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Donuts chocolat</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">17€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(17,'Donuts chocolat', 7, './assets/img/donuts/donut_3.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">17€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(17,'Donuts chocolat', 7, './assets/img/donuts/donut_3.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--8th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card">
           <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Macaron lavande</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">18€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(18,'Macaron lavande', 8, './assets/img/macarons/macarons_4.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">18€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(18,'Macaron lavande', 8, './assets/img/macarons/macarons_4.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- toggle à partir d'ici -->
       <!--9th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test1">
           <img class="card-img-top" src="./assets/img/cupcakes/pexels-photo-818789.jpeg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Cupcake Chocolat</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">19€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(19,'Cupcake Chocolat', 9, './assets/img/cupcakes/pexels-photo-818789.jpeg')">Ajouter au panier</a>
+            <span class="span-price mr-3">19€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(19,'Cupcake Chocolat', 9, './assets/img/cupcakes/pexels-photo-818789.jpeg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!--10th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test2">
           <img class="card-img-top" src="./assets/img/macarons/boxmacarons.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Boite de 20 macarons</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">20€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(20,'Boite de 20 macarons', 10, './assets/img/macarons/boxmacarons.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">20€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Boite de 20 macarons', 10, './assets/img/macarons/boxmacarons.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 11th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test3">
           <img class="card-img-top" src="./assets/img/donuts/donut-5191099_640.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Donut Caramel beurre salé</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">21€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(21,'Donut Caramel beurre salé', 11, './assets/img/donuts/donut-5191099_640.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">21€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(21,'Donut Caramel beurre salé', 11, './assets/img/donuts/donut-5191099_640.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 12th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test4">
           <img class="card-img-top" src="./assets/img/donuts/donut_5.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Donut Vanille Pistache</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">22€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(22,'Donut Vanille Pistache', 12, './assets/img/donuts/donut_5.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">22€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(22,'Donut Vanille Pistache', 12, './assets/img/donuts/donut_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 13th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test5">
           <img class="card-img-top" src="./assets/img/donuts/donut_6.jpeg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Box 6 donuts</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">23€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(23,'Box 6 donuts', 13, './assets/img/donuts/donut_6.jpeg')">Ajouter au panier</a>
+            <span class="span-price mr-3">23€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(23,'Box 6 donuts', 13, './assets/img/donuts/donut_6.jpeg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 14th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test6">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_1.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Rainbow Cupcake</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">24€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(24,'Rainbow Cupcake', 14, './assets/img/cupcakes/cupcake_1.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">24€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(24,'Rainbow Cupcake', 14, './assets/img/cupcakes/cupcake_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 15th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test7">
           <img class="card-img-top" src="./assets/img/cupcakes/cupcake_5.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Box 6 cupcakes</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">25€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(25,'Box 6 cupcakes', 15, './assets/img/cupcakes/cupcake_5.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">25€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(25,'Box 6 cupcakes', 15, './assets/img/cupcakes/cupcake_5.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 16th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test8">
           <img class="card-img-top" src="./assets/img/macarons/macaron_2.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Boite macarons pastel</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">26€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(26,'Boite macarons pastel', 16, './assets/img/macarons/macaron_2.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">26€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(26,'Boite macarons pastel', 16, './assets/img/macarons/macaron_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 17th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test9">
           <img class="card-img-top" src="./assets/img/macarons/macaron_1.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Macarons Chocolat Pistache</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">27€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(27,'Macarons Chocolat Pistache', 17, './assets/img/macarons/macaron_1.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">27€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(27,'Macarons Chocolat Pistache', 17, './assets/img/macarons/macaron_1.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 18th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test10">
           <img class="card-img-top" src="./assets/img/birthday-cake/pie-2980431_960_720.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Gateau 1</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">28€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(28,'Gateau 1', 18, './assets/img/birthday-cake/pie-2980431_960_720.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">28€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(28,'Gateau 1', 18, './assets/img/birthday-cake/pie-2980431_960_720.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 19th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test11">
           <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Gateau 2</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">29€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(29,'Gateau 2', 19, './assets/img/birthday-cake/cake_2.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">29€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(29,'Gateau 2', 19, './assets/img/birthday-cake/cake_2.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
       <!-- 20th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3">
+      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
         <div class="card" id="test12">
           <img class="card-img-top" src="./assets/img/birthday-cake/birthday-3021071_960_720.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Gâteau Personnalisé</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <span class="span-price">30€</span><a href="#" class="btn btn-danger" onclick="addPriceToCart(20,'Gâteau Personnalisé', 20, './assets/img/birthday-cake/birthday-3021071_960_720.jpg')">Ajouter au panier</a>
+            <span class="span-price mr-3">30€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Gâteau Personnalisé', 20, './assets/img/birthday-cake/birthday-3021071_960_720.jpg')">Ajouter au panier</button>
           </div>
         </div>
       </div>
-<!-- Ne pas toucher, div fermante container -->
-      </div>  
     <!-- fin des cards -->
+  </div>
     <!-- Bouton voir plus  -->
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex text-center justify-content-center">
-          <button id="b1" type="button" class="btn btn-danger">Voir Plus ...</button>
+          <button id="b1" type="button" class="btn btn-danger rounded-pill">Voir Plus ...</button>
         </div>
       </div>
     </div>
@@ -384,6 +388,7 @@
   </footer>
   <!--END OF FOOTER-->
     <script src="assets/script/main.js"></script>
+    <script src="assets/script/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
