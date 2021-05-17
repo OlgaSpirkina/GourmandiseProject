@@ -51,26 +51,25 @@
         <div class="row d-flex shopping-icon justify-content-end">
           <i class="fas fa-2x fa-shopping-cart text-custom-color"></i>
         </div>
+        <!-- Le PANIER: la div contenant la list des articles mis dans le panier -->
+              <div id="cart" class="cart d-flex flex-column-reverse">
+                <h4>Votre panier est vide</h4>
+        <!-- valider le panier -->
+                <div id="btn-in-cart" class="cart-buttons-container mt-3 d-flex justify-content-center">
+                  <a href="http://stackoverflow.com" class="btn btn-outline-secondary text-uppercase btn-background">Valider</a>
+                </div>
+        <!-- la somme total des articles -->
+                <div class="d-flex justify-content-center">
+                  <span id="totalPrice" class="d-flex justify-content-center mx-2"></span><span><strong id="total"></strong></span>
+                </div>
+              </div>
+        <!-- La FIN du panier -->
       </div>
     </section>
     <section class="container-fluid mx-0 px-0">
       <div class="row d-flex justify-content-center mx-0 px-0">
         <h2 class="text-center">Gourmandises & Compagnie</h2>
         <img class="imgAccueil img-fluid" src="./assets/img/banniere.jpg" alt="gateau_pastel">
-    <!-- Le PANIER: la div contenant la list des articles mis dans le panier -->
-          <div id="cart" class="cart d-flex flex-column-reverse">
-            <h4>Votre panier est vide</h4>
-    <!-- valider le panier -->
-            <div id="btn-in-cart" class="cart-buttons-container mt-3 d-flex justify-content-center">
-              <a href="http://stackoverflow.com" class="btn btn-outline-secondary text-uppercase btn-background">Valider</a>
-            </div>
-    <!-- la somme total des articles -->
-            <div class="d-flex justify-content-center">
-              <span id="totalPrice" class="d-flex justify-content-center mx-2"></span><span><strong id="total"></strong></span>
-            </div>
-          </div>
-
-    <!-- La FIN du panier -->
       </div>
     </section>
     <!-- la section A propos de nous -->
