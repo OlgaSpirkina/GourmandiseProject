@@ -21,7 +21,7 @@
 	background-size: cover;
 }
 h2 {
-  margin-top : 150px;
+  margin-top : 175px;
   font-family: var(--fonttitle);
   color: var(--mainred);
   font-size: 50px;
@@ -79,6 +79,9 @@ footer .social-media p{
   right: 0px;
   top: 3rem;
   margin-right: 1rem;
+}
+.shopping-icon{
+margin-top: -25px;
 }
 /*
 la div contenant le panier (.cart)
@@ -155,7 +158,7 @@ list-style-type: none;
 /* Media queries */
 @media all and (max-width: 600px) {
    h2{
-    font-size: 35px;
+    font-size: 25px;
   }
 	.cart{
 		background: rgba(255, 255, 255, .7);
@@ -166,4 +169,8 @@ list-style-type: none;
 	.btn-background{
 		background-color: rgba(251,157,171, .7);
 	}
+  .shopping-icon{
+  margin-top: -30px;
+  }
+
 }
