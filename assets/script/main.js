@@ -1,6 +1,6 @@
 // Barre de recherche jQuery
 
- const search = document.getElementById("search");
+const search = document.getElementById("search");
 const productName = document.querySelectorAll(".article h4");
 
 search.addEventListener("keyup", searchBar);
