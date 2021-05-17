@@ -55,3 +55,10 @@ footer .social-media p{
   cursor: pointer;
 }
 /* END OF FOOTER */
+
+/* Barre de recherches */
+#search{ 
+    border-radius:30px;
+    border: 2px solid #fb9dab;
+
+}
