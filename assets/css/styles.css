@@ -74,7 +74,7 @@ footer .social-media p{
 /* END OF FOOTER */
 
 /* Barre de recherches */
-#search{ 
+#search{
     border-radius:30px;
     border: 2px solid #fb9dab;
 }
@@ -142,9 +142,9 @@ list-style-type: none;
 }
 #test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8, #test9, #test10, #test11, #test12{
   display: none;
-} 
+}
 /* fin css catégories cards */
-/* 
+/*
 .test {
   display: none;
 } */
