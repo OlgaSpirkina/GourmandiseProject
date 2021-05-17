@@ -66,22 +66,22 @@ footer .social-media p{
   margin-right: 25px;
   border: 1px solid #fff;
   border-radius: 100%;
-  padding: 5px;
+  padding: 3%;
   text-align: center;
-  width: 40px;
+  width: 15%;
   cursor: pointer;
 }
 /* END OF FOOTER */
 /* placer l'icon de shopping-card en dehors de navbar */
 .fa-shopping-cart{
-  position: relative;
+  position: absolute;
   display: inline-block;
   right: 0px;
   top: 3rem;
   margin-right: 1rem;
 }
 .shopping-icon{
-margin-top: -25px;
+margin-top: 10px;
 }
 /*
 la div contenant le panier (.cart)
