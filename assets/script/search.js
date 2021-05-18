@@ -1,6 +1,7 @@
 // La barre de recherche
 const search = document.getElementById("search");
 const productName = document.querySelectorAll(".article h5");
+var gridItems = document.querySelectorAll('.item')
 
 search.addEventListener("keyup", searchBar);
 function searchBar(e) {
@@ -11,7 +12,9 @@ function searchBar(e) {
         if (item.toLowerCase().indexOf(text) != -1) {
             product.parentElement.parentElement.style.display = "block"
         }else {
-            product.parentElement.parentElement.style.display = "none"
+            product.parentElement.parentElement.style.display = "show"
         }
     })
 }
+   
+element.classList.remove('show')
