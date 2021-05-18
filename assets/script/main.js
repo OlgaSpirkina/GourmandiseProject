@@ -83,15 +83,8 @@ showAll()
 
 // début fonction voir plus
     $('#buttonPlus').click(function(){
-      if($(this).html("Voir Plus ...")){
-        $(this).html("Voir Moins");
-        $(this).addClass("voir-moins");
-      }else if($(this).html("Voir Moins")){
-        $(this).html('Voir Plus ...');
-        $(this).removeClass('voir-moins');
-      }
-
-
+      console.log($(this).html())
+      $(this).html() == "Voir Plus ..." ? $(this).html("Voir Moins") : $(this).html("Voir Plus ...");
         $('#test1').toggle();
         $('#test2').toggle();
         $('#test3').toggle();
@@ -104,22 +97,5 @@ showAll()
         $('#test10').toggle();
         $('#test11').toggle();
         $('#test12').toggle();
-          // $(this).html() == "Voir Moins" ? "Voir Plus ..." : "Voir Moins";
     });
 // fin fonction voir plus
-
-// changer texte bouton
-// let buttonPlus = document.querySelector('#buttonPlus');
-let isVisible = document.querySelector('#test1');
-isVisible == false
-console.log(isVisible);
-
-// $("#buttonPlus").click(function()
-// {
-// 	$(this).html("Voir Moins");
-// });
-
-// buttonPlus.addEventListener("click", () => {
-//   isVisible = !isVisible;
-//   isVisible ? text.classList.add('isVisible') : text.classList.replace("Voir Moins");
-// })
