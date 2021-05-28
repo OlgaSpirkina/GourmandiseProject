@@ -64,6 +64,7 @@ var gridItems = document.querySelectorAll('.item')
 function showAll() {
     gridItems.forEach(function(element) {
         element.classList.add('show')
+        // $("#buttonPlus").add()
     })
 }
 
@@ -71,6 +72,7 @@ function showCategory(category) {
     gridItems.forEach(function(element){
         if (element.classList.contains(category)) {
             element.classList.add('show')
+              // $("#buttonPlus").remove()
         }
         else {
             element.classList.remove('show')
@@ -78,12 +80,10 @@ function showCategory(category) {
     })
 }
 showAll()
-
 // fin fonction catégories
 
 // début fonction voir plus
     $('#buttonPlus').click(function(){
-      console.log($(this).html())
       $(this).html() == "Voir Plus ..." ? $(this).html("Voir Moins") : $(this).html("Voir Plus ...");
         $('#test1').toggle();
         $('#test2').toggle();
@@ -99,3 +99,8 @@ showAll()
         $('#test12').toggle();
     });
 // fin fonction voir plus
+
+// $("#buttonPlus").click(function()
+// {
+//   $(this).html() == "Voir Plus ..." ? $(this).html("Voir Moins") : $(this).html("Voir Plus ...");
+// });
