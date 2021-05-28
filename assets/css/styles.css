@@ -3,8 +3,6 @@
 	margin: 0;
 	padding: 0;
 }
-
-
 :root{
   --mainpink: #fb9dab;
   --mainred: #e53935;
@@ -51,7 +49,6 @@ h4 {
 .btn {
   font-family: var(--fonttext);
 }
-
 /*FOOTER */
 footer{
   margin-top: 100px;
@@ -74,7 +71,7 @@ footer .social-media p{
 /* END OF FOOTER */
 
 /* Barre de recherches */
-#search{
+#mySearch{
     border-radius:30px;
     border: 2px solid #fb9dab;
 }
@@ -170,6 +167,7 @@ list-style-type: none;
 	scale: 1.2;
 	background-color: yellow;
 }
+
 /* Media queries */
 @media all and (max-width: 600px) {
    h2{
@@ -188,4 +186,10 @@ list-style-type: none;
   margin-top: -30px;
   }
 
+
+}
+@media all and (min-width: 996px) {
+	ul{
+		margin-left: 10rem;
+	}
 }

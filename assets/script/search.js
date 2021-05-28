@@ -152,6 +152,7 @@ input.addEventListener('input', function () {
   items.forEach(function(item, i){
      if(item.id.charAt(0) == filter.charAt(0)){
       document.getElementById("parent").style.display = "none";
+      document.getElementById("buttonPlus").style.display = "none";
       document.getElementById("div-display-items").innerHTML += '<div class="row item show col-md-6 col-lg-3 mb-3">' +
                          '<div class="card">' +
                            '<img class="card-img-top" src=' + item.img + ' alt="Card image cap">' +
@@ -165,6 +166,7 @@ input.addEventListener('input', function () {
     }
     else if(filter == ""){
       document.getElementById("parent").style.display = "block";
+      document.getElementById("buttonPlus").style.display = "block";
     }
   })
 });

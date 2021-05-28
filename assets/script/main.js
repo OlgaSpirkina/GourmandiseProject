@@ -9,6 +9,7 @@
 // le tableau qui va contenir tout les prix d'article permettant de faire des calcules
 let arrayShoppingCart = [];
 let sum = 0;
+sum = parseFloat(sum.toFixed(2));
 // ajouter les articles dans le panier
 function addPriceToCart(prix, prod, id, img) {
   let shoppingCart = '<div id=item_'+ id +' class="cart-item d-flex justify-content-between text-capitalize my-3">' +
@@ -29,9 +30,9 @@ function addPriceToCart(prix, prod, id, img) {
     document.getElementById("btn-in-cart").style.visibility = "visible"; // le bouton "Valide le panier" apparait
     document.querySelector("h4").style.visibility = "hidden";   // le text "votre panier est vide" disparait
   // calcul et affichage de la somme totale
-    let price = parseInt(prix, 10);
-      arrayShoppingCart.push(price);
-      sum += price;
+    // let price = parseFloat(prix);
+      arrayShoppingCart.push(prix);
+      sum += prix;
       document.getElementById("total").innerHTML = sum;
       document.getElementById("totalPrice").innerHTML = "Total €:";
 
