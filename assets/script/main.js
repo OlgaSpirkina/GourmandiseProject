@@ -142,36 +142,10 @@ const items = [
     img: "./assets/img/birthday-cake/birthday-3021071_960_720.jpg"
   },
 ];
-function bestSellers() {
-  firstEight = items.filter((item,idx) => idx < 8)
-  if(firstEight){
-    firstEight.forEach(function(item, i){
-      document.getElementById("div-display-items").innerHTML += '<div class="row item col-md-6 col-lg-3 mb-3">' +
-                    '<div class="card">' +
-                      '<img class="card-img-top" src=' + item.img + ' alt="Card image cap">' +
-                      '<div class="card-body">' +
-                        '<h5 class="card-title">' + item.title + '</h5>' +
-                        '<p class="card-text">' + item.text + '</p>' +
-                         `<span class="span-price mr-3"> ${item.price}€ </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
-                      '</div>' +
-                    '</div>' +
-                  '</div>';
-                })
-  }
-
-}
-window.onload = bestSellers;
-// faire apparaitre et disparaitre le panier
-(function(){
-  const cartInfo = document.querySelector(".fa-shopping-cart");
-  const cart = document.getElementById("cart");
-  cartInfo.addEventListener("click", function(){
-    cart.classList.toggle('show-cart'); // la div invisible avec width=0 prend la largeur est devien visible
-  })
-})();
 // le tableau qui va contenir tout les prix d'article permettant de faire des calcules
 let arrayShoppingCart = [];
 let sum = 0;
+// sum = parseFloat(sum.toFixed(2));
 // ajouter les articles dans le panier
 function addPriceToCart(prix, prod, id, img) {
   let shoppingCart = '<div id=item_'+ id +' class="cart-item d-flex justify-content-between text-capitalize my-3">' +
@@ -192,14 +166,41 @@ function addPriceToCart(prix, prod, id, img) {
     document.getElementById("btn-in-cart").style.visibility = "visible"; // le bouton "Valide le panier" apparait
     document.querySelector("h4").style.visibility = "hidden";   // le text "votre panier est vide" disparait
   // calcul et affichage de la somme totale
-    let price = parseInt(prix, 10);
+    let price = parseFloat(prix);
       arrayShoppingCart.push(price);
       sum += price;
-      document.getElementById("total").innerHTML = sum;
+      document.getElementById("total").innerHTML = parseFloat(sum.toFixed(2));
       document.getElementById("totalPrice").innerHTML = "Total €:";
 
 }
+function bestSellers() {
+  firstEight = items.filter((item,idx) => idx < 8)
+  if(firstEight){
+    firstEight.forEach(function(item, i){
+      document.getElementById("div-display-items").innerHTML += '<div class="row item col-md-6 col-lg-3 mb-3">' +
+                    '<div class="card">' +
+                      '<img class="card-img-top" src=' + item.img + ' alt="Card image cap">' +
+                      '<div class="card-body">' +
+                        '<h5 class="card-title">' + item.title + '</h5>' +
+                        '<p class="card-text">' + item.text + '</p>' +
+                        '<span>€</span>' +
+                        `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                      '</div>' +
+                    '</div>' +
+                  '</div>';
+                })
+  }
 
+}
+window.onload = bestSellers;
+// faire apparaitre et disparaitre le panier
+(function(){
+  const cartInfo = document.querySelector(".fa-shopping-cart");
+  const cart = document.getElementById("cart");
+  cartInfo.addEventListener("click", function(){
+    cart.classList.toggle('show-cart'); // la div invisible avec width=0 prend la largeur est devien visible
+  })
+})();
 // supprimer les article un par un
 function emptyTrash(item_id){
   let removedItem = document.querySelector("#item_" + item_id + " > .item-text > .prod-title").innerHTML;
@@ -219,8 +220,6 @@ function allRemoved(){
   }
 }
 // la FIN de la fonction allRemoved() et de toutes les fonction appliquées au PANIER
-
-
 var input, filter;
 input = document.getElementById("mySearch");
 filter = input.value.toLowerCase();
@@ -229,22 +228,27 @@ input.addEventListener('input', function () {
   document.getElementById("div-display-items").innerHTML = "";
   items.forEach(function(item, i){
      if(item.id.charAt(0) == filter.charAt(0)){
-         document.getElementById("div-display-items").innerHTML += '<div class="row item col-md-6 col-lg-3 mb-3">' +
+      // document.getElementById("parent").style.display = "none";
+      document.getElementById("see-more").style.display = "none";
+      document.getElementById("div-display-items").innerHTML += '<div class="row item show col-md-6 col-lg-3 mb-3">' +
                          '<div class="card">' +
                            '<img class="card-img-top" src=' + item.img + ' alt="Card image cap">' +
                            '<div class="card-body">' +
                              '<h5 class="card-title">' + item.title + '</h5>' +
                              '<p class="card-text">' + item.text + '</p>' +
-                             `<span class="span-price mr-3"> ${item.price}€ </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                             '<span>€</span>' +
+                             `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
                            '</div>' +
                          '</div>' +
                        '</div>';
     }
     else if(filter == ""){
-      bestSellers();
+      // document.getElementById("parent").style.display = "block";
+      document.getElementById("see-more").style.display = "block";
     }
   })
 });
+
   function showCategory(category){
   document.getElementById("div-display-items").innerHTML = "";
   items.forEach(function(item, i){
@@ -255,7 +259,8 @@ input.addEventListener('input', function () {
                         '<div class="card-body">' +
                           '<h5 class="card-title">' + item.title + '</h5>' +
                           '<p class="card-text">' + item.text + '</p>' +
-                           `<span class="span-price mr-3"> ${item.price}€</span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                          '<span>€</span>' +
+                          `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
                         '</div>' +
                       '</div>' +
                     '</div>';
@@ -266,7 +271,8 @@ input.addEventListener('input', function () {
                         '<div class="card-body">' +
                           '<h5 class="card-title">' + item.title + '</h5>' +
                           '<p class="card-text">' + item.text + '</p>' +
-                           `<span class="span-price mr-3"> ${item.price}€</span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                          '<span>€</span>' +
+                          `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
                         '</div>' +
                       '</div>' +
                     '</div>';
@@ -288,7 +294,8 @@ seeMore.addEventListener('click', function () {
                       '<div class="card-body">' +
                         '<h5 class="card-title">' + item.title + '</h5>' +
                         '<p class="card-text">' + item.text + '</p>' +
-                         `<span class="span-price mr-3"> ${item.price}€ </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                        '<span>€</span>' +
+                        `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
                       '</div>' +
                     '</div>' +
                   '</div>';
