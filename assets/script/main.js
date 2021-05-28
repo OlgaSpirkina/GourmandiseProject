@@ -30,9 +30,9 @@ function addPriceToCart(prix, prod, id, img) {
     document.getElementById("btn-in-cart").style.visibility = "visible"; // le bouton "Valide le panier" apparait
     document.querySelector("h4").style.visibility = "hidden";   // le text "votre panier est vide" disparait
   // calcul et affichage de la somme totale
-    // let price = parseFloat(prix);
-      arrayShoppingCart.push(prix);
-      sum += prix;
+    let price = parseFloat(prix);
+      arrayShoppingCart.push(price);
+      sum += price;
       document.getElementById("total").innerHTML = sum;
       document.getElementById("totalPrice").innerHTML = "Total €:";
 

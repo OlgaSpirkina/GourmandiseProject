@@ -31,7 +31,7 @@ const items = [
   {
     id: 'cupcakes',
     title: "Cupcakes nature",
-    text: "Cupcake saveur vanille et glaçage vanille de bourbon",
+    text: "Cupcake saveur vanille et glaçage vanille de bourbon. Un délice !",
     price: 3.99,
     img: "./assets/img/cupcakes/cupcake_3.jpg"
   },
@@ -52,7 +52,7 @@ const items = [
   {
     id: 'macarons',
     title: "Macaron lavande",
-    text: "Macaron moelleux à la saveur de lavande de Provence",
+    text: "Macaron moelleux à la saveur de lavande de Provence. Savourez le!",
     price: 1.80,
     img: "./assets/img/macarons/macarons_4.jpg"
   },
@@ -159,7 +159,8 @@ input.addEventListener('input', function () {
                            '<div class="card-body">' +
                              '<h5 class="card-title">' + item.title + '</h5>' +
                              '<p class="card-text">' + item.text + '</p>' +
-                             `<span class="span-price mr-3"> ${item.price}€ </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
+                             '<span>€</span>' +
+                             `<span class="span-price mr-3"> ${item.price} </span><button onclick="addPriceToCart('${item.price}', '${item.title}', ${i}, '${item.img}')" type="button" class="btn btn-danger rounded-pill">Ajouter au panier</button>` +
                            '</div>' +
                          '</div>' +
                        '</div>';
