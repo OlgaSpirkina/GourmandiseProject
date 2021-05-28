@@ -15,7 +15,6 @@
   height: auto;
   display: block;
   /* changer la height par rapport à la navbar */
-
 	background-size: cover;
 }
 h2 {
@@ -122,33 +121,10 @@ le panier est visible quand on clique sur l'icon de panier
 .card-title{
   font-size: 18px;
 }
-/* début css catégories Cards */
-
 .filter-list {
 list-style-type: none;
 }
-/* item permet de linker les catégories avec les articles */
-.item {
-    display: none;
-    /* padding: 2rem; */
-    /* text-align: center; */
-    background-color: white;
-  /* border: 3px solid black; */
-}
-.show {
-    display: block;
-}
-#test1, #test2, #test3, #test4, #test5, #test6, #test7, #test8, #test9, #test10, #test11, #test12{
-  display: none;
-}
-/* fin css catégories cards */
-/*
-.test {
-  display: none;
-} */
 
-
-/* fin css catégories cards */
 /* les icons qui permetent d'ajouter un article dans le panier sont cachés */
 .small-shopping-icon{
 	visibility: hidden;
@@ -160,14 +136,6 @@ list-style-type: none;
 	top: 15rem;
 	right: 1.3rem;
 }
-/* faire apparaitre un icon, sur onclick l'article correspondant est envoyé dans le panier */
-.div-small-shopping-icon:hover > .small-shopping-icon{
-	visibility: visible;
-	transition: all 0.3s ease-in-out;
-	scale: 1.2;
-	background-color: yellow;
-}
-
 /* Media queries */
 @media all and (max-width: 600px) {
    h2{
@@ -185,8 +153,6 @@ list-style-type: none;
   .shopping-icon{
   margin-top: -30px;
   }
-
-
 }
 @media all and (min-width: 996px) {
 	ul{

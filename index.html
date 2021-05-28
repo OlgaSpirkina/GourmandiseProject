@@ -100,274 +100,37 @@
     <div class="container">
       <div class="row">
         <ul class="filter-list justify-content-around d-flex w-100 flex-wrap">
-          <li><button type="button" class="btn active btn btn-outline-danger" id="all" onclick="showAll('')">VOIR TOUT
+          <li><button type="button" class="btn active btn btn-outline-danger" id="all" onclick="showCategory('all')">VOIR TOUT
           </li>
           <li><button type="button" class="btn btn-outline-danger"
-              onclick="showCategory('category-1')">CUPCAKES</button></li>
-          <li><button type="button" class="btn btn-outline-danger" onclick="showCategory('category-2')">DONUTS</button>
+              onclick="showCategory('cupcakes')">CUPCAKES</button></li>
+          <li><button type="button" class="btn btn-outline-danger" onclick="showCategory('donuts')">DONUTS</button>
           </li>
           <li><button type="button" class="btn btn-outline-danger"
-              onclick="showCategory('category-3')">MACARONS</button></li>
-          <li><button type="button" class="btn btn-outline-danger" onclick="showCategory('category-4')">GATEAUX</button>
+              onclick="showCategory('macarons')">MACARONS</button></li>
+          <li><button type="button" class="btn btn-outline-danger" onclick="showCategory('gateaux')">GATEAUX</button>
           </li>
         </ul>
       </div>
     </div>
     <!-- Fin des catégories -->
-      <!-- Barre de recherche-->
-      <div class="container-fluid">
-        <form class="row form-inline d-flex justify-content-end my-3 mr-5">
-          <input id="mySearch" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
-      <!-- TEST div pour la barre de recherche -->
-      <div id="div-display-items" class="container-fluid d-flex flex-wrap mb-3 justify-content-center">
-
-      </div>
-      <!-- fin TEST -->
-      <!-- div TEST cards à l'intérieur -->
-  <div id="parent">
-      <!-- Les cards -->
-    <!--1st card-->
-    <div class="container-fluid d-flex flex-wrap mb-3 justify-content-center">
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <div class="div-small-shopping-icon" onclick="addPriceToCart(11,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">
-            <i class="fas fa-3x fa-cart-arrow-down small-shopping-icon"></i>
-          </div>
-          <img class="card-img-top" src="./assets/img/cupcakes/cupcake_2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cupcake framboise</h5>
-            <p class="card-text">Délicieux cupcake à la framboise recouvert de glaçage vanille de bourbon </p>
-            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(3.99,'Cupcake Framboise', 1, './assets/img/cupcakes/cupcake_2.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--2nd card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/donuts/donut_1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Donut arc-en-ciel</h5>
-            <p class="card-text">Irrésistible donut nature fourré à la crème avec un glaçage vanille et arc-en-ciel</p>
-            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(2.99,'Donut rainbow', 2, './assets/img/donuts/donut_1.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--3rd card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/macarons/macarons_10.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Boîte de 12 macarons</h5>
-            <p class="card-text">Choisissez parmi notre sélélection 12 de nos merveilleux macarons</p>
-            <span class="span-price mr-3">20€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(20,'Boite de macarons', 3, './assets/img/macarons/macarons_10.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--4th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/birthday-cake/cake_3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Gâteau à la fraise</h5>
-            <p class="card-text">Magnifique gâteau à la fraise et glaçage vanille de bourbon</p>
-            <span class="span-price mr-3">60€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(60,'Gâteau à la fraise', 4, './assets/img/birthday-cake/cake_3.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--5th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/cupcakes/cupcake_3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cupcake nature</h5>
-            <p class="card-text">Cupcake saveur vanille et glaçage vanille de bourbon. Un délice!</p>
-            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(3.99,'Cupcakes nature', 5, './assets/img/cupcakes/cupcake_3.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--6th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/birthday-cake/cake_5.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Gâteau occasion spéciale</h5>
-            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
-            <span class="span-price mr-3">80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(80,'Layer cake', 6, './assets/img/birthday-cake/cake_5.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--7th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/donuts/donut_3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Donut chocolat</h5>
-            <p class="card-text">Succulent donut fourré au chocolat avec glaçage chocolat</p>
-            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(2.99,'Donuts chocolat', 7, './assets/img/donuts/donut_3.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--8th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
-        <div class="card">
-          <img class="card-img-top" src="./assets/img/macarons/macarons_4.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Macaron lavande</h5>
-            <p class="card-text">Macaron moelleux à la saveur de lavande de Provence. Savourez le!</p>
-            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(1.8,'Macaron lavande', 8, './assets/img/macarons/macarons_4.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- toggle à partir d'ici -->
-      <!--9th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test1">
-          <img class="card-img-top" src="./assets/img/cupcakes/pexels-photo-818789.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cupcake chocolat</h5>
-            <p class="card-text">Délicieux cupcake au chocolat enrobé de glaçage pur cacao</p>
-            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(19,'Cupcake Chocolat', 9, './assets/img/cupcakes/pexels-photo-818789.jpeg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!--10th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test2">
-          <img class="card-img-top" src="./assets/img/macarons/boxmacarons.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Boîte de 20 macarons</h5>
-            <p class="card-text">Choisissez parmi notre sélélection 20 de nos merveilleux macarons</p>
-            <span class="span-price mr-3">35€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(35,'Boite de 20 macarons', 10, './assets/img/macarons/boxmacarons.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 11th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test3">
-          <img class="card-img-top" src="./assets/img/donuts/donut-5191099_640.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Donut caramel beurre salé</h5>
-            <p class="card-text">Délectable donut au caramel d'Isigny et beurre salé avec un glaçage vanille et noisettes caramelisées</p>
-            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(2.99,'Donut Caramel beurre salé', 11, './assets/img/donuts/donut-5191099_640.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 12th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test4">
-          <img class="card-img-top" src="./assets/img/donuts/donut_5.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Donut vanille pistache</h5>
-            <p class="card-text">Savoureux donut à la pistache avec son glaçage à la vanille de bourbon</p>
-            <span class="span-price mr-3">2.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(2.99,'Donut Vanille Pistache', 12, './assets/img/donuts/donut_5.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 13th card-->
-      <div class="row item category-2 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test5">
-          <img class="card-img-top" src="./assets/img/donuts/donut_6.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Boîte de 6 donuts</h5>
-            <p class="card-text">Choisissez parmi notre sélélection 6 de nos merveilleux donuts</p>
-            <span class="span-price mr-3">16€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(16,'Box 6 donuts', 13, './assets/img/donuts/donut_6.jpeg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 14th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test6">
-          <img class="card-img-top" src="./assets/img/cupcakes/cupcake_1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cupcake arc-en-ciel</h5>
-            <p class="card-text">Fantaisiste cupcake nature avec un glaçage à la fraise et décoration bonbons.</p>
-            <span class="span-price mr-3">3.99€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(3.99,'Rainbow Cupcake', 14, './assets/img/cupcakes/cupcake_1.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 15th card-->
-      <div class="row item category-1 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test7">
-          <img class="card-img-top" src="./assets/img/cupcakes/cupcake_5.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Boîte de 6 cupcakes</h5>
-            <p class="card-text">Choisissez parmi notre sélélection 6 de nos merveilleux cupcakes</p>
-            <span class="span-price mr-3">22€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(22,'Box 6 cupcakes', 15, './assets/img/cupcakes/cupcake_5.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 16th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test8">
-          <img class="card-img-top" src="./assets/img/macarons/macaron_2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Macaron framboise</h5>
-            <p class="card-text">Exquis macaron à la framboise fourré d'une gelée à la framboise</p>
-            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(1.8,'Boite macarons pastel', 16, './assets/img/macarons/macaron_2.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 17th card-->
-      <div class="row item category-3 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test9">
-          <img class="card-img-top" src="./assets/img/macarons/macaron_1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Macaron pistache café chocolat</h5>
-            <p class="card-text">Délectable macaron saveur pistache café fourré au chocolat</p>
-            <span class="span-price mr-3">1.80€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(1.8,'Macarons Chocolat Pistache', 17, './assets/img/macarons/macaron_1.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 18th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test10">
-          <img class="card-img-top" src="./assets/img/birthday-cake/pie-2980431_960_720.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Gâteau au chocolat</h5>
-            <p class="card-text">Succulent gâteau au chocolat au lait fourré de truffes au chocolat blanc et noir</p>
-            <span class="span-price mr-3">70€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(70,'Gateau 1', 18, './assets/img/birthday-cake/pie-2980431_960_720.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 19th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test11">
-          <img class="card-img-top" src="./assets/img/birthday-cake/cake_2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Gâteau marriage</h5>
-            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
-            <span class="span-price mr-3">120€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(120,'Gateau 2', 19, './assets/img/birthday-cake/cake_2.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- 20th card-->
-      <div class="row item category-4 col-md-6 col-lg-3 mb-3 article">
-        <div class="card" id="test12">
-          <img class="card-img-top" src="./assets/img/birthday-cake/birthday-3021071_960_720.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Gâteau anniversaire</h5>
-            <p class="card-text">Gâteau réalisé sur mesure. Merci de nous contacter au 06 50 99 20 18.</p>
-            <span class="span-price mr-3">90€</span><button type="button" class="btn btn-danger rounded-pill" onclick="addPriceToCart(90,'Gâteau Personnalisé', 20, './assets/img/birthday-cake/birthday-3021071_960_720.jpg')">Ajouter au panier</button>
-          </div>
-        </div>
-      </div>
-      <!-- FIN div TEST id="parent" -->
-</div>
-      <!-- id="parent" -->
-    <!-- fin des cards -->
-  </div>
+    <!-- Barre de recherche-->
+    <div class="container-fluid">
+      <form class="form-inline d-flex justify-content-end my-3 mr-5">
+        <input id="mySearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+    <!-- La DIV pour afficher les articles  -->
+    <section class="d-flex flex-wrap justify-content-center" id="div-display-items"></section>
     <!-- Bouton voir plus  -->
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex text-center justify-content-center">
-          <button id="buttonPlus" type="button" class="btn btn-danger rounded-pill">Voir Plus ...</button>
+          <button id="see-more" type="button" class="btn btn-danger rounded-pill">Voir Plus ...</button>
         </div>
       </div>
     </div>
     <!-- fin bouton voir plus -->
-
 
   <!--FOOTER-->
   <footer class="container-fluid">
@@ -383,7 +146,6 @@
   </footer>
   <!--END OF FOOTER-->
     <script src="assets/script/main.js"></script>
-    <script src="assets/script/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
