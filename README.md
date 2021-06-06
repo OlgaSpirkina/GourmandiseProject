@@ -1,6 +1,8 @@
 # Gourmandise & Co v.1.0 
 Un projet du site e-commerce
 
+![grab-landing-page](https://raw.githubusercontent.com/OlgaSpirkina/GourmandiseProject/main/GIF-GourmandiseProject.gif)
+
 ## Sur le site présent vous pouvez:
 1. Choisir un ou plusieurs articles répartis entre 4 catégories
 2. Ajouter ou supprimer les articles du panier
