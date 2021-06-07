@@ -222,9 +222,8 @@ function allRemoved(){
 // la FIN de la fonction allRemoved() et de toutes les fonction appliquées au PANIER
 var input, filter;
 input = document.getElementById("mySearch");
-filter = input.value.toLowerCase();
 input.addEventListener('input', function () {
-  filter = document.getElementById("mySearch").value;
+  let  filter = input.value.toLowerCase();
   document.getElementById("div-display-items").innerHTML = "";
   items.forEach(function(item, i){
      if(item.id.charAt(0) == filter.charAt(0)){
